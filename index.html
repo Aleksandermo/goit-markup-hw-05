@@ -19,7 +19,9 @@
       <nav class="nav-position">
         <a href="/" class="logo link logo-position">WEB<span class="filter-studio">Studio</span></a>
         <ul class="list mail">
-          <li><a href="./index.html" class="filter-nav link list-first inside-contacts">Studio</a></li>
+          <li>
+            <a href="./index.html" class="filter-nav link list-first inside-contacts filter-transition">Studio</a>
+          </li>
           <li><a href="./portfolio.html" class="filter-nav link list-first inside-contacts">Portfolio</a>
           </li>
           <li><a href="" class="filter-nav link list-first">Contacts</a></li>
@@ -43,17 +45,6 @@
         <h1 class="branding-header title">Effective Solutions for Your Business</h1>
         <button data-modal-open type="button" class="filter-single-button filter-first-button">Order Service</button>
     </section>
-
-    <div class="modal-window is-hidden" data-modal>
-      <section class="modal-body">
-        <div data-modal-close class="icon-close">
-          <svg width="24" height="24">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </div>
-
-      </section>
-    </div>
 
     <section class="section boxes">
       <div class="container">
@@ -387,6 +378,20 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal-window is-hidden" data-modal>
+
+    <div class="modal-body">
+
+      <button data-modal-close type="button" class="icon-close">
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
   <script src="./js/modal.js"></script>
 </body>
 

@@ -132,6 +132,8 @@ ol {
 .social-icons-filter:hover,
 .social-icons-filter:focus {
   background-color: var(--ocean);
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
 }
 
 .icon-fourth-section-index {
@@ -166,6 +168,8 @@ ol {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -231,6 +235,8 @@ ol {
   padding: 12px 24px 12px;
   border: 1px solid var(--cornflower);
   border-radius: 4px;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
 }
 .filter-icons {
   display: flex;
@@ -293,6 +299,8 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
 }
 .footer-link-list:hover,
 .footer-link-list:focus {
@@ -321,11 +329,14 @@ ol {
 }
 .shadow-filter {
   display: block;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
 }
 .shadow-filter:hover,
 .shadow-filter:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 
 .list {
@@ -386,6 +397,8 @@ ol {
   font-size: 16px;
   letter-spacing: 0.04em;
   line-height: 1.5;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
 }
 .filter-single-button:hover,
 .filter-single-button:focus,
@@ -493,14 +506,32 @@ ol {
 }
 .icon-close {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  align-items: center;
+  background-color: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: border, background-color;
+  transition-timing-function: var(--tr-fn);
+  transition-duration: var(--tr-duration);
 }
+.icon-close:hover .icon-close:focus {
+  background-color: var(--ocean);
+  border: none;
+}
+
 .applications > img {
   display: block;
   width: 100%;
   height: auto;
 }
-.applications:hover figcaption {
+.applications:hover .paragraph-wraper {
   translate: 0;
   opacity: 0.85;
 }
@@ -508,7 +539,7 @@ ol {
   position: relative;
   overflow: hidden;
 }
-.application-image-wraper figcaption {
+.application-image-wraper .paragraph-wraper {
   position: absolute;
   inset: 0;
   background-color: var(--iris);
