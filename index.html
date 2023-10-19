@@ -41,9 +41,19 @@
     <section class="main-title-background filter-title">
       <div class="container">
         <h1 class="branding-header title">Effective Solutions for Your Business</h1>
-        <button type="button" class="filter-single-button filter-first-button">Order Service</button>
-      </div>
+        <button data-modal-open type="button" class="filter-single-button filter-first-button">Order Service</button>
     </section>
+
+    <div class="modal-window is-hidden" data-modal>
+      <section class="modal-body">
+        <div data-modal-close class="icon-close">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+
+      </section>
+    </div>
 
     <section class="section boxes">
       <div class="container">
@@ -377,7 +387,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

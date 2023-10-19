@@ -29,6 +29,11 @@ ol {
   --studio: #2e2f42;
   --cornflower: #e7e9fc;
   --footcolor: #31d0aa;
+
+  --color-neutral-dark: #303030;
+
+  --tr-fn: cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-duration: 250ms;
 }
 
 .container {
@@ -458,4 +463,68 @@ ol {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.modal-window {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: all;
+  background-color: hsl(666deg 10% 5% / 0.5);
+  transition-property: opacity;
+  transition-timing-function: var(--tr-fn);
+  transition-duration: var(--tr-duration);
+}
+.modal-window.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
+    skew(40deg, 40deg);
+}
+.modal-body {
+  color: var(--color-neutral-dark);
+  background-color: var(--white);
+  width: min(512px, 50vw);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.icon-close {
+  display: flex;
+  justify-content: flex-end;
+}
+.applications > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.applications:hover figcaption {
+  translate: 0;
+  opacity: 0.85;
+}
+.application-image-wraper {
+  position: relative;
+  overflow: hidden;
+}
+.application-image-wraper figcaption {
+  position: absolute;
+  inset: 0;
+  background-color: var(--iris);
+  opacity: 0;
+  translate: 0 100%;
+  transition-property: translate, opacity;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
+}
+.application-filter {
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white);
 }
