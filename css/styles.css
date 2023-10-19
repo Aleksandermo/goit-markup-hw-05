@@ -59,6 +59,26 @@ ol {
 .inside-contacts {
   padding: 24px 0 24px;
 }
+.highlight {
+  position: relative;
+  color: var(--ocean);
+  transition: color;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
+}
+.main-highlight {
+  transition: color;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--tr-fn);
+}
+.main-highlight::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+}
 .mail {
   display: flex;
   gap: 40px;
@@ -170,7 +190,7 @@ ol {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
-  transition: background-color;
+  transition: border-color, color;
   transition-duration: var(--tr-duration);
   transition-timing-function: var(--tr-fn);
 }
@@ -538,15 +558,19 @@ ol {
   transition-timing-function: var(--tr-fn);
   transition-duration: var(--tr-duration);
 }
-.icon-close:hover .icon-close:focus {
+.icon-close:hover,
+.icon-close:focus {
   background-color: var(--ocean);
   border: none;
-  fill: var(--white);
 }
 .icon-trans {
   transition: fill;
   transition-timing-function: var(--tr-fn);
   transition-duration: var(--tr-duration);
+}
+.icon-trans:hover,
+.icon-trans:focus {
+  fill: var(--white);
 }
 .application-image-wraper {
   position: relative;
@@ -563,17 +587,15 @@ ol {
   background-color: var(--iris);
   opacity: 0;
   translate: 0 100%;
-  transition-property: translate, opacity;
+  transition-property: transform, translate, opacity;
   transition-duration: var(--tr-duration);
   transition-timing-function: var(--tr-fn);
 }
 .application-filter {
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--cloud);
 }
