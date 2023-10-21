@@ -68,10 +68,12 @@ ol {
 }
 .main-highlight {
   transition: color;
+  color: var(--ocean);
   transition-duration: var(--tr-duration);
   transition-timing-function: var(--tr-fn);
 }
 .main-highlight::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -568,8 +570,8 @@ ol {
   transition-timing-function: var(--tr-fn);
   transition-duration: var(--tr-duration);
 }
-.icon-trans:hover,
-.icon-trans:focus {
+.icon-close:hover,
+.icon-close:focus .icon-trans {
   fill: var(--white);
 }
 .application-image-wraper {
@@ -578,16 +580,16 @@ ol {
 }
 
 .application-image-wraper:hover .paragraph-wraper {
-  translate: 0;
+  transform: translateY(0%);
   opacity: 0.85;
 }
-.application-image-wraper .paragraph-wraper {
+.paragraph-wraper {
   position: absolute;
   inset: 0;
   background-color: var(--iris);
   opacity: 0;
-  translate: 0 100%;
-  transition-property: transform, translate, opacity;
+  transform: translateY(100%);
+  transition: transform, translate, opacity;
   transition-duration: var(--tr-duration);
   transition-timing-function: var(--tr-fn);
 }
