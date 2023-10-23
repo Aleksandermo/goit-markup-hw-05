@@ -60,6 +60,9 @@ ol {
 .inside-contacts {
   padding: 24px 0 24px;
 }
+.menu-filter {
+  display: inline-block;
+}
 .main-highlight {
   position: relative;
   transition: color;
@@ -84,8 +87,6 @@ ol {
 }
 .filter-header {
   border-bottom: 1px solid var(--cornflower);
-  padding-top: 24px;
-  padding-bottom: 24px;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -379,7 +380,7 @@ ol {
 }
 .list-first {
   color: var(--body);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -391,7 +392,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.list-first {
+.list-first-font {
   color: var(--body);
   font-weight: 500;
   font-size: 16px;
@@ -588,7 +589,7 @@ ol {
   overflow: hidden;
 }
 
-.application-image-wraper:hover .paragraph-wraper {
+.shadow-filter:hover .paragraph-wraper {
   transform: translateY(0%);
   opacity: 0.85;
 }
