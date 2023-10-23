@@ -73,6 +73,7 @@ ol {
   left: 0;
   bottom: -1px;
   height: 4px;
+  color: var(--ocean);
   background-color: var(--ocean);
   border-radius: 2px;
 }
